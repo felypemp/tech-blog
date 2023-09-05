@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
+    height: 550px;
     border-radius: 10px;
     max-width: 350px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -137,7 +137,6 @@ footer{
     .card{
         flex-direction: column;
         justify-content: space-between;
-        height: 500px;
         max-width: 18.75rem;
     }
 }
@@ -145,6 +144,12 @@ footer{
 @media screen and (max-width: 1300px){
     .titulo-pagina{
         font-size: 1.5rem;
+    }
+
+    .menu-nav a{
+        font-size: 1.1rem;
+        margin-right: 0.8rem;
+        padding: 0.5rem;
     }
 
     .conteudo-principal{
@@ -167,8 +172,19 @@ footer{
         font-size: 1.5rem;
     }
 
+    .img-logo {
+        max-width:110x;
+        max-height: 35px;
+    }
+
+    .menu-nav a{
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.2rem;
+    }
+
     .card{
-        width: 40%;
+        width: 45%;
         height: 400px;
         max-width: 18.75rem;
         margin-bottom: 20px;
@@ -202,6 +218,23 @@ footer{
 
 
 @media screen and (max-width: 648px){
+    .cabecalho{
+        justify-content:center
+    }
+
+    .titulo-pagina{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+
+    .titulo-pagina img{
+        display: none;
+    }
+
+    .menu-nav{
+        display: none;
+    }
     .conteudo-principal{
         flex-direction: column;
     }
