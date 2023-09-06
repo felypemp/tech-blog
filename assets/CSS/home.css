@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:wght@700&family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 .bg{
     background: url('../img/bg_tech.jpg') no-repeat;
@@ -12,14 +12,18 @@
     max-width: 1680px;
     margin: 0 auto;
     display: flex;
+    gap:2%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.cabecalho{
+header{
     background-color: rgba(72, 76, 80, 0.288);
+}
+.cabecalho{
+    justify-content: space-between;
 }
 
 .img-logo {
@@ -45,6 +49,10 @@
     font-weight: bold;
 }
 
+.social{
+    background:  #78787B;
+}
+
 /* ========== CONTEUDO PRINCIPAL ==========*/
 
 .titulo-pagina{
@@ -56,6 +64,15 @@
     margin-top: 0.8rem;
 }
 
+.titulo-conteudo-principal{
+    color: white;
+    max-width: 1680px;
+    margin: 0 auto;
+    font-size: 50px;
+    font-family: 'Merriweather', serif;
+    
+}
+
 .img-titulo-pagina{
     margin-left: 20px;
     max-width: 50px;
@@ -63,17 +80,17 @@
 
 .conteudo-principal{
     margin-top: 3rem;
-    display: flex;
-    min-height: 80vh;
+    min-height: 900px;
 }
 
 .card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 550px;
-    border-radius: 10px;
-    max-width: 350px;
+    height: 700px;
+    border-radius: 5px;
+    width: 400px;
+    border: 0 solid #818191;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     background:rgb(255, 255, 255);
     text-align: center;
@@ -81,14 +98,30 @@
 }
 
 .card:hover{
-    cursor: pointer;
     transform: scale(1.1);
     z-index: 1;
 }
 
+.card-img-titulo{
+    display: inline-block;
+    position: relative;
+}
+
+.card-img-titulo figcaption{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    background: rgb(146, 203, 250);
+    text-shadow: 0px 0px 5px black;
+}
+
 .card-titulo{
-    padding: 10px;
-    font-size:1.8rem;
+    padding-top: 20px;
+    font-size:1rem;
     font-weight: 700;
 }
 
@@ -99,16 +132,33 @@
 
 .card-titulo-post{
     margin-top: 5px;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    padding: 2px;
 }
 
 .card-texto{
     padding: 10px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.card-continueLendo{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 0 20px 20px ;
+    display: inline-block;
+    font-size:16px;
+    font-weight: 700;
+    text-align: left;
+    color: orange;
 }
 
 .card-data{
-
+    padding: 10px;
+}
+hr{
+    width: 90%;
 }
 
 footer{
@@ -118,20 +168,7 @@ footer{
 }
 
 
-.yellow{
-    border-left: 4px solid yellow;
-}
-
-.green {
-    border-left: 4px solid #3bb54a;
-  }
-   
-  .red {
-    border-left: 4px solid #b3404a;
-  }
-
-
-  /*========== RESPONSIVO ==========*/
+ /* ========== RESPONSIVO ========== */
 
 @media screen and (max-width: 1470px){
     .card{
