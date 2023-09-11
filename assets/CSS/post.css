@@ -1,9 +1,34 @@
-section{
-    background: white;
-    width: 100%;
+.container-post {
+    background: url('../img/bg-post.jpg') no-repeat;
+    background-size: cover;
 }
 
 .post-titulo{
-    font-size:4rem;
+    background: url('../img/bg_tech_post2.jpg') no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.post-titulo-txt{
+    color: black;
+    max-width: 1140px;
+    padding: 4rem 2rem;
+    font-size: 80px;
     text-align: center;
+    margin: 0 auto;
+    /* font-weight: bold; */
+    font-family: 'Merriweather', serif;
+    line-height: 6rem;
+}
+
+.post-txt{
+    font-size: 24px;
+    line-height: 44px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+p {
+    display: block;
+    padding: 1.5rem 0;
 }

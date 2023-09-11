@@ -3,7 +3,7 @@
 .bg{
     background: url('../img/bg_tech.jpg') no-repeat;
     background-size: cover;
-    height: auto
+    height: auto;
 }
 /* ========== MENU ==========*/
 
@@ -20,8 +20,9 @@
 }
 
 header{
-    background-color: rgba(72, 76, 80, 0.288);
+    background-color: #585858
 }
+
 .cabecalho{
     justify-content: space-between;
 }
@@ -51,6 +52,19 @@ header{
 
 .social{
     background:  #78787B;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+.social-icones{
+    color: white;
+    font-size:2rem;
+}
+
+.social-icones i{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 /* ========== CONTEUDO PRINCIPAL ==========*/
@@ -61,7 +75,7 @@ header{
     color: white;
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    margin-top: 0.8rem;
+    padding-top: 4rem;
 }
 
 .titulo-conteudo-principal{
@@ -90,7 +104,6 @@ header{
     height: 700px;
     border-radius: 5px;
     width: 400px;
-    border: 0 solid #818191;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     background:rgb(255, 255, 255);
     text-align: center;
@@ -131,16 +144,18 @@ header{
 }
 
 .card-titulo-post{
-    margin-top: 5px;
+    margin-top: 2rem;
     font-size: 1.8rem;
     font-weight: bold;
     padding: 2px;
+    height: 7rem;
 }
 
 .card-texto{
     padding: 10px;
     font-size: 1.2rem;
     text-align: justify;
+    height: 13.25rem;
 }
 
 .card-continueLendo{
@@ -152,17 +167,16 @@ header{
     font-weight: 700;
     text-align: left;
     color: orange;
+    height: 2rem;
 }
 
 .card-data{
     padding: 10px;
 }
-hr{
-    width: 90%;
-}
 
 footer{
     display: block;
+    background-color:  #585858;
     color: white;
     text-align: center;
 }
