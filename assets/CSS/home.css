@@ -63,7 +63,7 @@ header{
 }
 
 .social-icones i{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     cursor: pointer;
 }
 
@@ -184,15 +184,24 @@ footer{
 
  /* ========== RESPONSIVO ========== */
 
-@media screen and (max-width: 1470px){
-    .card{
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 18.75rem;
-    }
-}
-
 @media screen and (max-width: 1300px){
+    .container{
+        max-width: 100vw;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu-nav a{
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .card{
+        margin-bottom: 50px;
+        height: 700px;
+        width: 450px;
+    }
+
     .titulo-conteudo-principal{
         font-size: 40px;
     }
@@ -209,11 +218,60 @@ footer{
     }
 }
 
-@media screen and (max-width: 922px){
+@media screen and (max-width: 1000px){
+    .menu-nav a{
+        font-size: 1rem;
+    }
+
+    .titulo-pagina{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    .img-titulo-pagina{
+        max-width: 40px;
+        margin-top: 1rem;
+    }
+
+    .social-icones{
+        font-size:1.5rem;
+    }
+
+    .card{
+        margin-bottom: 50px;
+        height: 600px;
+        width: 400px;
+    }
+
+    .titulo-conteudo-principal{
+        font-size: 30px;
+    }
     
+    .card-titulo-post{
+        font-size: 1.3rem;
+    }
+    
+    .card-texto{
+        padding: 10px;
+        font-size: 1rem;
+    }
  }
 
 
 @media screen and (max-width: 648px){
-    
+    .menu-nav{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .titulo-pagina{
+        flex-direction: column;
+        font-size: 1.6rem;
+    }
+
+    .img-titulo-pagina{
+        max-width: 40px;
+        margin-top: 1rem;
+    }
 }

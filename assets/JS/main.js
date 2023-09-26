@@ -41,34 +41,43 @@ function incrementarVisualizacoes(contadorVisualizacoes, contador) {
 
   }
   function removerClasse(elemento){
-    const noticia1 = document.getElementById(elemento);
-    if (noticia1) {
-      noticia1.classList.remove("esconder");
+    const noticia = document.getElementById(elemento);
+    if (noticia) {
+      noticia.classList.remove("esconder");
     }
   }
   
 
   document.addEventListener("DOMContentLoaded", function () {
-    removerClasse('noticia1')
+    removerClasse(localStorage.getItem('noticia'))
   });
   
 /* ========== Eventos ==========*/
 
 card1.addEventListener('click', () => {
+    localStorage.setItem('noticia', 'noticia1')
     incrementarVisualizacoes('contadorVisualizacoes1', 'contador1');
 });
 
 card2.addEventListener('click', () => {
+    localStorage.setItem('noticia', 'noticia2')
     incrementarVisualizacoes('contadorVisualizacoes2', 'contador2');
+    
 });
 
 card3.addEventListener('click', () => {
+    localStorage.setItem('noticia', 'noticia3')
     incrementarVisualizacoes('contadorVisualizacoes3', 'contador3');
+    
 });
 
 card4.addEventListener('click', () => {
+    localStorage.setItem('noticia', 'noticia4')
     incrementarVisualizacoes('contadorVisualizacoes4', 'contador4');
+    
 });
+
+
 
 document.addEventListener('DOMContentLoaded', carregarContador);
 
