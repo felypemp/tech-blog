@@ -13,7 +13,7 @@
     color: black;
     max-width: 1140px;
     padding: 4rem 2rem;
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     margin: 0 auto;
     /* font-weight: bold; */
@@ -26,6 +26,7 @@
     line-height: 44px;
     max-width: 1140px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 p {
@@ -36,3 +37,71 @@ p {
 .esconder{
     display: none;
 }
+
+
+/* ========== RESPONSIVO ========== */
+
+@media screen and (max-width: 1300px){
+    .post-txt{
+        font-size: 24px;
+        max-width: 900px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    .post-titulo-txt{
+        max-width: 800px;
+        font-size: 58px;
+        line-height: 6rem;
+    }
+
+    .post-txt{
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 800px;
+    }
+ }
+
+
+@media screen and (max-width: 840px){
+    .post-titulo-txt{
+        max-width: 600px;
+        font-size: 48px;
+        line-height: 5rem;
+    }
+
+    .post-txt{
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 600px;
+    }
+ }
+
+ @media screen and (max-width: 648px){
+    .post-titulo-txt{
+        max-width: 600px;
+        font-size: 40px;
+        line-height: 4rem;
+    }
+
+    .post-txt{
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 450px;
+    }
+ }
+
+ @media screen and (max-width: 440px){
+    .post-titulo-txt{
+        max-width: 600px;
+        font-size: 36px;
+        line-height: 4rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .post-txt{
+        font-size: 18px;
+        line-height: 36px;
+    }
+ }
