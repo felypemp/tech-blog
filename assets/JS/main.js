@@ -5,7 +5,16 @@ const card2 = document.querySelector('.card2');
 const card3 = document.querySelector('.card3');
 const card4 = document.querySelector('.card4');
 
-const voltarInicio = document.querySelector('voltarInicio');
+const btnTodasCateorias = document.querySelector('.btn-todasCategorias');
+const btnTecnologia = document.querySelector('.btn-tecnologia');
+const btnComunicacoes = document.querySelector('.btn-comunicacoes');
+const btnRelacoes = document.querySelector('.btn-relacoes');
+
+const divComunicacoes = document.querySelector('.comunicacoes');
+const divRelacoes = document.querySelector('.relacoes');
+const divTecnologia = document.querySelector('.tecnologia');
+
+
 
 
 /* ========== Funções ==========*/
@@ -40,6 +49,7 @@ function incrementarVisualizacoes(contadorVisualizacoes, contador) {
     }
 
   }
+
   function removerClasse(elemento){
     const noticia = document.getElementById(elemento);
     if (noticia) {
@@ -52,6 +62,7 @@ function incrementarVisualizacoes(contadorVisualizacoes, contador) {
     removerClasse(localStorage.getItem('noticia'))
   });
   
+
 /* ========== Eventos ==========*/
 
 card1.addEventListener('click', () => {
@@ -74,8 +85,37 @@ card3.addEventListener('click', () => {
 card4.addEventListener('click', () => {
     localStorage.setItem('noticia', 'noticia4')
     incrementarVisualizacoes('contadorVisualizacoes4', 'contador4');
-    
 });
+
+btnTodasCateorias.addEventListener('click', (e) => {
+  e.preventDefault();
+  divComunicacoes.classList.remove('esconder')
+  divRelacoes.classList.remove('esconder')
+  divTecnologia.classList.remove('esconder')
+})
+
+btnTecnologia.addEventListener('click', (e) => {
+  e.preventDefault();
+  divTecnologia.classList.remove('esconder')
+  divComunicacoes.classList.add('esconder')
+  divRelacoes.classList.add('esconder')
+})
+
+btnComunicacoes.addEventListener('click', (e) => {
+  e.preventDefault();
+  divComunicacoes.classList.remove('esconder')
+  divRelacoes.classList.add('esconder')
+  divTecnologia.classList.add('esconder')
+})
+
+btnRelacoes.addEventListener('click', (e) => {
+  e.preventDefault();
+  divComunicacoes.classList.add('esconder')
+  divRelacoes.classList.remove('esconder')
+  divTecnologia.classList.add('esconder')
+})
+
+
 
 
 
