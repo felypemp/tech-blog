@@ -20,7 +20,7 @@
 }
 
 header{
-    background-color: #585858
+    background-color: #000;
 }
 
 .cabecalho{
@@ -51,7 +51,7 @@ header{
 }
 
 .social{
-    background:  #78787B;
+    background: rgb(5, 5, 5);
     margin: 0 auto;
     justify-content: center;
     display: flex;
@@ -101,7 +101,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 650px;
+    height: 700px;
     border-radius: 5px;
     width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -140,18 +140,18 @@ header{
 }
 
 .card-titulo-post{
-    margin-top: 2rem;
-    font-size: 1.8rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
     font-weight: bold;
     padding: 2px;
     height: 7rem;
 }
 
 .card-texto{
-    padding: 10px;
-    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
     text-align: justify;
-    height: 13.25rem;
 }
 
 .card-continueLendo{
@@ -159,7 +159,7 @@ header{
     text-transform: uppercase;
     margin: 0 0 20px 20px ;
     display: inline-block;
-    font-size:16px;
+    font-size: 1rem;
     font-weight: 700;
     text-align: left;
     color: orange;
@@ -171,12 +171,13 @@ header{
     display: flex;
     justify-content: space-around;
     padding: 20px 10px;
+    border-top: 1px solid #eaeaea;
 
 }
 
 footer{
     display: block;
-    background-color:  #585858;
+    background-color:  rgb(5, 5, 5);
     color: white;
     text-align: center;
 }
@@ -207,11 +208,12 @@ footer{
     }
     
     .card-titulo-post{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        padding: 1rem;
     }
     
     .card-texto{
-        padding: 10px;
+        padding: 1.5rem;
         font-size: 1.2rem;
         text-align: justify;
         height: 13.25rem;
@@ -273,5 +275,43 @@ footer{
     .img-titulo-pagina{
         max-width: 40px;
         margin-top: 1rem;
+    }
+
+    .card{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .titulo-pagina{
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .img-titulo-pagina{
+        max-width: 40px;
+        margin-top: 1rem;
+    }
+
+    .card{
+        height: 600px;
+    }
+
+    .card-titulo-post{
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+    
+    .card-texto{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .card-continueLendo{
+        font-size: 0.8rem;
+        margin: 5px ;
+    }
+    .card-rodape{
+        font-size: 0.8rem;
     }
 }
