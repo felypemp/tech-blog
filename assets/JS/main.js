@@ -12,8 +12,7 @@ const btnRelacoes = document.querySelector('.btn-relacoes');
 
 const divComunicacoes = document.querySelector('.comunicacoes');
 const divRelacoes = document.querySelector('.relacoes');
-const divTecnologia = document.querySelector('.tecnologia');
-
+const divTecnologia = document.querySelectorAll('.tecnologia');
 
 
 
@@ -89,35 +88,58 @@ card4.addEventListener('click', () => {
 
 btnTodasCateorias.addEventListener('click', (e) => {
   e.preventDefault();
-  divComunicacoes.classList.remove('esconder')
-  divRelacoes.classList.remove('esconder')
-  divTecnologia.classList.remove('esconder')
+  selecionarCategoria('todasCategorias')
 })
 
 btnTecnologia.addEventListener('click', (e) => {
   e.preventDefault();
-  divTecnologia.classList.remove('esconder')
-  divComunicacoes.classList.add('esconder')
-  divRelacoes.classList.add('esconder')
+  selecionarCategoria('tecnologia')
 })
 
 btnComunicacoes.addEventListener('click', (e) => {
   e.preventDefault();
-  divComunicacoes.classList.remove('esconder')
-  divRelacoes.classList.add('esconder')
-  divTecnologia.classList.add('esconder')
+  selecionarCategoria('comunicacoes')
 })
 
 btnRelacoes.addEventListener('click', (e) => {
   e.preventDefault();
-  divComunicacoes.classList.add('esconder')
-  divRelacoes.classList.remove('esconder')
-  divTecnologia.classList.add('esconder')
+  selecionarCategoria('relacoes')
 })
 
 
+function selecionarCategoria(categoria) {
+  if (categoria === 'todasCategorias'){
+    divComunicacoes.classList.remove('esconder');
+    divRelacoes.classList.remove('esconder');
+    divTecnologia.forEach((tecnologia) =>{
+      tecnologia.classList.remove('esconder')
+    })
+  }
+  
+  if (categoria === 'tecnologia'){
+    divComunicacoes.classList.add('esconder');
+    divRelacoes.classList.add('esconder');
+    divTecnologia.forEach((tecnologia) =>{
+      tecnologia.classList.remove('esconder')
+    })
+  }
 
+  if (categoria === 'comunicacoes'){
+    divComunicacoes.classList.remove('esconder');
+    divRelacoes.classList.add('esconder');
+    divTecnologia.forEach((tecnologia) =>{
+      tecnologia.classList.add('esconder')
+    })
+  }
 
+  if (categoria === 'relacoes'){
+    divComunicacoes.classList.add('esconder');
+    divRelacoes.classList.remove('esconder');
+    divTecnologia.forEach((tecnologia) =>{
+      tecnologia.classList.add('esconder')
+    })
+  }
+}
 
 document.addEventListener('DOMContentLoaded', carregarContador);
 
