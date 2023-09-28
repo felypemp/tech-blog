@@ -52,7 +52,7 @@ p {
 @media screen and (max-width: 1000px){
     .post-titulo-txt{
         max-width: 800px;
-        font-size: 58px;
+        font-size: 52px;
         line-height: 6rem;
     }
 
