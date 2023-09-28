@@ -55,14 +55,46 @@ function incrementarVisualizacoes(contadorVisualizacoes, contador) {
       noticia.classList.remove("esconder");
     }
   }
-  
 
-  document.addEventListener("DOMContentLoaded", function () {
-    removerClasse(localStorage.getItem('noticia'))
-  });
+  function selecionarCategoria(categoria) {
+    if (categoria === 'todasCategorias'){
+      divComunicacoes.classList.remove('esconder');
+      divRelacoes.classList.remove('esconder');
+      divTecnologia.forEach((tecnologia) =>{
+        tecnologia.classList.remove('esconder')
+      })
+    }
+    
+    if (categoria === 'tecnologia'){
+      divComunicacoes.classList.add('esconder');
+      divRelacoes.classList.add('esconder');
+      divTecnologia.forEach((tecnologia) =>{
+        tecnologia.classList.remove('esconder')
+      })
+    }
   
+    if (categoria === 'comunicacoes'){
+      divComunicacoes.classList.remove('esconder');
+      divRelacoes.classList.add('esconder');
+      divTecnologia.forEach((tecnologia) =>{
+        tecnologia.classList.add('esconder')
+      })
+    }
+  
+    if (categoria === 'relacoes'){
+      divComunicacoes.classList.add('esconder');
+      divRelacoes.classList.remove('esconder');
+      divTecnologia.forEach((tecnologia) =>{
+        tecnologia.classList.add('esconder')
+      })
+    }
+  }
 
 /* ========== Eventos ==========*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  removerClasse(localStorage.getItem('noticia'))
+});
 
 card1.addEventListener('click', () => {
     localStorage.setItem('noticia', 'noticia1')
@@ -106,40 +138,6 @@ btnRelacoes.addEventListener('click', (e) => {
   selecionarCategoria('relacoes')
 })
 
-
-function selecionarCategoria(categoria) {
-  if (categoria === 'todasCategorias'){
-    divComunicacoes.classList.remove('esconder');
-    divRelacoes.classList.remove('esconder');
-    divTecnologia.forEach((tecnologia) =>{
-      tecnologia.classList.remove('esconder')
-    })
-  }
-  
-  if (categoria === 'tecnologia'){
-    divComunicacoes.classList.add('esconder');
-    divRelacoes.classList.add('esconder');
-    divTecnologia.forEach((tecnologia) =>{
-      tecnologia.classList.remove('esconder')
-    })
-  }
-
-  if (categoria === 'comunicacoes'){
-    divComunicacoes.classList.remove('esconder');
-    divRelacoes.classList.add('esconder');
-    divTecnologia.forEach((tecnologia) =>{
-      tecnologia.classList.add('esconder')
-    })
-  }
-
-  if (categoria === 'relacoes'){
-    divComunicacoes.classList.add('esconder');
-    divRelacoes.classList.remove('esconder');
-    divTecnologia.forEach((tecnologia) =>{
-      tecnologia.classList.add('esconder')
-    })
-  }
-}
 
 document.addEventListener('DOMContentLoaded', carregarContador);
 
